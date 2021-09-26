@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./configs/swagger-docs.js";
 import userRoutes from "./routes/users.js";
 
 /**
@@ -19,6 +20,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
+
+/**
+ * Configure Swagger-UI:
+ */
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /**
  * Configure Routes:

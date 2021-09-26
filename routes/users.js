@@ -8,7 +8,15 @@ import { deleteUser } from "../controllers/users.js";
 
 const router = express.Router();
 
-// GET /users -> get all users.
+/** 
+ * @swagger
+ * /api/v1/users:
+ *  get:
+ *    description: Get all users
+ *    responses:
+ *      200:
+ *        description: A successful response
+*/
 router.get("/users", getAllUsers);
 
 // GET /users/:id -> get user by id.
