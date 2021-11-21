@@ -3,8 +3,8 @@ import swaggerJsDoc from "swagger-jsdoc";
 const swaggerOptions = {
   swaggerDefinition: {
     info: {
-      title: "Node.js API Documentation",
       version: "1.0.0",
+      title: "Node.js API Documentation",
       description: "API Documentation for Node.js",
     },
   },
