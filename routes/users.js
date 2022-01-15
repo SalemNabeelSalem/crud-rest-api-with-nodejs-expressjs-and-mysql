@@ -8,7 +8,7 @@ import { deleteUser } from "../controllers/users.js";
 
 const router = express.Router();
 
-/** 
+/**
  * @swagger
  * /api/v1/users:
  *  get:
@@ -21,10 +21,10 @@ const router = express.Router();
  *    responses:
  *      200:
  *        description: A successful response
-*/
+ */
 router.get("/users", getAllUsers);
 
-/** 
+/**
  * @swagger
  * /api/v1/users/{id}:
  *  get:
@@ -43,7 +43,7 @@ router.get("/users", getAllUsers);
  *    responses:
  *      200:
  *        description: A successful response
-*/
+ */
 router.get("/users/:id", getUserById);
 
 /**
@@ -63,7 +63,7 @@ router.get("/users/:id", getUserById);
  *        name: userRequest
  *        description: user input data.
  *        required: true
- *        schema: 
+ *        schema:
  *          type: object
  *          properties:
  *            name:
@@ -77,7 +77,7 @@ router.get("/users/:id", getUserById);
  *              example: Aden City
  *    responses:
  *      200:
- *        description: A successful response 
+ *        description: A successful response
  */
 router.post("/users", createUser);
 
@@ -103,7 +103,7 @@ router.post("/users", createUser);
  *        name: userRequest
  *        description: user input data.
  *        required: true
- *        schema: 
+ *        schema:
  *          type: object
  *          properties:
  *            name:
@@ -117,11 +117,11 @@ router.post("/users", createUser);
  *              example: Aden City
  *    responses:
  *      200:
- *        description: A successful response 
+ *        description: A successful response
  */
 router.put("/users/:id", updateUser);
 
-/** 
+/**
  * @swagger
  * /api/v1/users/{id}:
  *  delete:
@@ -140,7 +140,7 @@ router.put("/users/:id", updateUser);
  *    responses:
  *      200:
  *        description: A successful response
-*/
+ */
 router.delete("/users/:id", deleteUser);
 
 export default router;

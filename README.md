@@ -10,22 +10,22 @@
 
 ## Features
 
-  * Robust routing
-  * Focus on high performance
-  * Super-high test coverage
-  * HTTP helpers (redirection, caching, etc)
-  * View system supporting 14+ template engines
-  * Content negotiation
-  * Executable for generating applications quickly
+  * Robust routing.
+  * Focus on high performance.
+  * Super-high test coverage.
+  * HTTP helpers (redirection, caching, etc).
+  * View system supporting 14+ template engines.
+  * Content negotiation.
+  * Executable for generating applications quickly.
 
 ## Docs & Community
 
-  * [Website and Documentation](http://expressjs.com/) - [[website repo](https://github.com/expressjs/expressjs.com)]
-  * [#express](https://webchat.freenode.net/?channels=express) on freenode IRC
-  * [GitHub Organization](https://github.com/expressjs) for Official Middleware & Modules
-  * Visit the [Wiki](https://github.com/expressjs/express/wiki)
-  * [Google Group](https://groups.google.com/group/express-js) for discussion
-  * [Gitter](https://gitter.im/expressjs/express) for support and discussion
+  * [Website and Documentation](http://expressjs.com/) - [[website repo](https://github.com/expressjs/expressjs.com)].
+  * [express](https://webchat.freenode.net/?channels=express) on freenode IRC.
+  * [GitHub Organization](https://github.com/expressjs) for Official Middleware & Modules.
+  * Visit the [Wiki](https://github.com/expressjs/express/wiki).
+  * [Google Group](https://groups.google.com/group/express-js) for discussion.
+  * [Gitter](https://gitter.im/expressjs/express) for support and discussion.
 
 **PROTIP** Be sure to read [Migrating from 3.x to 4.x](https://github.com/expressjs/express/wiki/Migrating-from-3.x-to-4.x) as well as [New features in 4.x](https://github.com/expressjs/express/wiki/New-features-in-4.x).
 

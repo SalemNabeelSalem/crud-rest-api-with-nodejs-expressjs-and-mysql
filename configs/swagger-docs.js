@@ -8,7 +8,7 @@ const swaggerOptions = {
       description: "API Documentation for Node.js",
     },
   },
-  apis: ['./routes/*.js'],
+  apis: ["./routes/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
