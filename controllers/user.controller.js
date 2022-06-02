@@ -2,14 +2,14 @@ import mysql from "../configs/mysql.js";
 
 /*
 export const getAllUsers = (req, res) => {
-  mysql.getConnection((err, connection) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.getConnection((error, connection) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
-      connection.query("SELECT * FROM users ORDER BY id DESC", (err, rows) => {
+      connection.query("SELECT * FROM users ORDER BY id DESC", (error, rows) => {
         connection.release();
-        if (err) {
-          res.status(500).send(err);
+        if (error) {
+          res.status(500).send(error);
         } else {
           res.send(rows);
         }
@@ -20,9 +20,9 @@ export const getAllUsers = (req, res) => {
 */
 
 export const getAllUsers = (req, res) => {
-  mysql.query("SELECT * FROM users ORDER BY id DESC", (err, rows) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.query("SELECT * FROM users ORDER BY id DESC", (error, rows) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       res.send(rows);
     }
@@ -31,17 +31,17 @@ export const getAllUsers = (req, res) => {
 
 /*
 export const getUserById = (req, res) => {
-  mysql.getConnection((err, connection) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.getConnection((error, connection) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       const { id } = req.params;
       connection.query(
         "SELECT * FROM users WHERE id = ?",
-        [id], (err, rows) => {
+        [id], (error, rows) => {
           connection.release();
-          if (err) {
-            res.status(500).send(err);
+          if (error) {
+            res.status(500).send(error);
           } else {
             if (rows.length > 0) {
               res.send(rows);
@@ -58,9 +58,9 @@ export const getUserById = (req, res) => {
 
 export const getUserById = (req, res) => {
   const id = req.params.id;
-  mysql.query("SELECT * FROM users WHERE id = ?", [id], (err, rows) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.query("SELECT * FROM users WHERE id = ?", [id], (error, rows) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       if (rows.length > 0) {
         res.send(rows);
@@ -73,18 +73,18 @@ export const getUserById = (req, res) => {
 
 /*
 export const createUser = (req, res) => {
-  mysql.getConnection((err, connection) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.getConnection((error, connection) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       const { name, address, age } = req.body;
       connection.query(
         "INSERT INTO users (name, address, age) VALUES (?, ?, ?)",
         [name, address, age],
-        (err, rows) => {
+        (error, rows) => {
           connection.release();
-          if (err) {
-            res.status(500).send(err);
+          if (error) {
+            res.status(500).send(error);
           } else {
             rows.message = `user with id ${rows.insertId} is created.`;
             res.send(rows.message);
@@ -101,9 +101,9 @@ export const createUser = (req, res) => {
   mysql.query(
     "INSERT INTO users (name, address, age) VALUES (?, ?, ?)",
     [name, address, age],
-    (err, rows) => {
-      if (err) {
-        res.status(500).send(err);
+    (error, rows) => {
+      if (error) {
+        res.status(500).send(error);
       } else {
         rows.message = `user with id ${rows.insertId} is created.`;
         res.send(rows.message);
@@ -114,19 +114,19 @@ export const createUser = (req, res) => {
 
 /*
 export const updateUser = (req, res) => {
-  mysql.getConnection((err, connection) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.getConnection((error, connection) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       const { id } = req.params;
       const { name, address, age } = req.body;
       connection.query(
         "UPDATE users SET name = ?, address = ?, age = ? WHERE id = ?",
         [name, address, age, id],
-        (err, rows) => {
+        (error, rows) => {
           connection.release();
-          if (err) {
-            res.status(500).send(err);
+          if (error) {
+            res.status(500).send(error);
           } else {
             if (rows.affectedRows > 0) {
               res.send(`user with id ${id} is updated.`);
@@ -147,9 +147,9 @@ export const updateUser = (req, res) => {
   mysql.query(
     "UPDATE users SET name = ?, address = ?, age = ? WHERE id = ?",
     [name, address, age, id],
-    (err, rows) => {
-      if (err) {
-        res.status(500).send(err);
+    (error, rows) => {
+      if (error) {
+        res.status(500).send(error);
       } else {
         if (rows.affectedRows > 0) {
           res.send(`user with id ${id} is updated.`);
@@ -163,18 +163,18 @@ export const updateUser = (req, res) => {
 
 /*
 export const deleteUser = (req, res) => {
-  mysql.getConnection((err, connection) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.getConnection((error, connection) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       const id = req.params.id;
       connection.query(
         "DELETE FROM users WHERE id = ?",
         [id],
-        (err, rows) => {
+        (error, rows) => {
           connection.release();
-          if (err) {
-            res.status(500).send(err);
+          if (error) {
+            res.status(500).send(error);
           } else {
             if (rows.affectedRows > 0) {
               res.send(`user with id ${id} is deleted.`);
@@ -191,9 +191,9 @@ export const deleteUser = (req, res) => {
 
 export const deleteUser = (req, res) => {
   const id = req.params.id;
-  mysql.query("DELETE FROM users WHERE id = ?", [id], (err, rows) => {
-    if (err) {
-      res.status(500).send(err);
+  mysql.query("DELETE FROM users WHERE id = ?", [id], (error, rows) => {
+    if (error) {
+      res.status(500).send(error);
     } else {
       if (rows.affectedRows > 0) {
         res.send(`user with id ${id} is deleted.`);

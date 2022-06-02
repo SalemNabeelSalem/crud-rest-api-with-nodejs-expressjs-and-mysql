@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from "./configs/swagger-docs.js";
-import userRoutes from "./routes/users.js";
+import userRoutes from "./routes/user.routes.js";
 
 /**
  * Configure Express Server:
