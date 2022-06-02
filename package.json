@@ -2,10 +2,10 @@
   "name": "crud-rest-api-with-nodejs-expressjs-and-mysql",
   "version": "1.0.0",
   "description": "crud-rest-api-with-nodejs-expressjs-and-mysql",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "author": "Salem Nabeel <isalemnabeelsalem@gmail.com>",
   "license": "MIT",

@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //-> parse application/json
 app.use(bodyParser.json());
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+app.listen(port, () => console.log(`server started on port ${port}`));
 
 /**
  * Configure Swagger-UI:
